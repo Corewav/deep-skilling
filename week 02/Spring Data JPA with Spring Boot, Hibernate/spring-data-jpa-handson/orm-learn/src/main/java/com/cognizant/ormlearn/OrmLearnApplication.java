@@ -9,7 +9,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.cognizant.ormlearn.model.Country;
+import com.cognizant.ormlearn.model.Department;
+import com.cognizant.ormlearn.model.Employee;
+import com.cognizant.ormlearn.model.Skill;
 import com.cognizant.ormlearn.service.CountryService;
+import com.cognizant.ormlearn.service.DepartmentService;
+import com.cognizant.ormlearn.service.EmployeeService;
+import com.cognizant.ormlearn.service.SkillService;
 import com.cognizant.ormlearn.service.exception.CountryNotFoundException;
 
 @SpringBootApplication
@@ -18,6 +24,9 @@ public class OrmLearnApplication {
     private static final Logger LOGGER = LoggerFactory.getLogger(OrmLearnApplication.class);
 
     private static CountryService countryService;
+    private static EmployeeService employeeService;
+    private static DepartmentService departmentService;
+    private static SkillService skillService;
 
     public static void main(String[] args) throws CountryNotFoundException {
 
@@ -25,6 +34,9 @@ public class OrmLearnApplication {
         LOGGER.info("Inside main");
 
         countryService = context.getBean(CountryService.class);
+        employeeService = context.getBean(EmployeeService.class);
+        departmentService = context.getBean(DepartmentService.class);
+        skillService = context.getBean(SkillService.class);
 
         testGetAllCountries();
         testFindCountryByCode();
@@ -37,7 +49,11 @@ public class OrmLearnApplication {
         testCountriesEndingWith();
         testCountriesContaining();
         testCountryByCodeRepository();
-        
+
+        testGetAllDepartments();
+        testGetAllSkills();
+        testGetAllEmployees();
+        testGetPermanentEmployees();
     }
 
     private static void testGetAllCountries() {
@@ -115,4 +131,32 @@ public class OrmLearnApplication {
         LOGGER.info("End");
     }
 
+    private static void testGetAllDepartments() {
+        LOGGER.info("Start");
+        List<Department> departments = departmentService.getAllDepartments();
+        LOGGER.debug("Departments={}", departments);
+        LOGGER.info("End");
+    }
+
+    private static void testGetAllSkills() {
+        LOGGER.info("Start");
+        List<Skill> skills = skillService.getAllSkills();
+        LOGGER.debug("Skills={}", skills);
+        LOGGER.info("End");
+    }
+
+    private static void testGetAllEmployees() {
+        LOGGER.info("Start");
+        List<Employee> employees = employeeService.getAllEmployees();
+        LOGGER.debug("Employees={}", employees);
+        LOGGER.info("End");
+    }
+
+    private static void testGetPermanentEmployees() {
+        LOGGER.info("Start");
+        List<Employee> employees = employeeService.getPermanentEmployees();
+        LOGGER.debug("Permanent Employees={}", employees);
+        employees.forEach(e -> LOGGER.debug("Skills={}", e.getSkillList()));
+        LOGGER.info("End");
+    }
 }
