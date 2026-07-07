@@ -1,0 +1,5 @@
+# Created at 2026-07-07T21:53:20.528
+Boot Manifest-JAR contains absolute paths in classpath 'D:\for phone\Cognizant\Deep Skilling\deep-skilling\week 01\TDD using JUnit5 and Mockito\JUnit_Basic Testing Exercises\junit-basic-testing\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
