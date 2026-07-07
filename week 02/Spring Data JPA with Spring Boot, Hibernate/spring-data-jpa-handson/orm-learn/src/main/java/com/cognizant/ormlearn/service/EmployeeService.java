@@ -26,4 +26,29 @@ public class EmployeeService {
     public List<Employee> getPermanentEmployees() {
         return employeeRepository.findByPermanentTrue();
     }
+
+    @Transactional
+    public List<Employee> getAllPermanentEmployeesHql() {
+        return employeeRepository.getAllPermanentEmployees();
+    }
+
+    @Transactional
+    public List<Employee> getAllPermanentEmployeesHqlFetch() {
+        return employeeRepository.getAllPermanentEmployeesWithFetch();
+    }
+
+    @Transactional
+    public double getAverageSalary() {
+        return employeeRepository.getAverageSalary();
+    }
+
+    @Transactional
+    public double getAverageSalaryByDepartment(int departmentId) {
+        return employeeRepository.getAverageSalaryByDepartment(departmentId);
+    }
+
+    @Transactional
+    public List<Employee> getAllEmployeesNative() {
+        return employeeRepository.getAllEmployeesNative();
+    }
 }

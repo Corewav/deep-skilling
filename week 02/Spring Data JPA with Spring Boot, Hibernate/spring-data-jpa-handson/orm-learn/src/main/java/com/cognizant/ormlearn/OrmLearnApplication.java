@@ -54,6 +54,12 @@ public class OrmLearnApplication {
         testGetAllSkills();
         testGetAllEmployees();
         testGetPermanentEmployees();
+
+        testGetAllPermanentEmployeesHql();
+        testGetAllPermanentEmployeesHqlFetch();
+        testGetAverageSalary();
+        testGetAverageSalaryByDepartment();
+        testGetAllEmployeesNative();
     }
 
     private static void testGetAllCountries() {
@@ -157,6 +163,42 @@ public class OrmLearnApplication {
         List<Employee> employees = employeeService.getPermanentEmployees();
         LOGGER.debug("Permanent Employees={}", employees);
         employees.forEach(e -> LOGGER.debug("Skills={}", e.getSkillList()));
+        LOGGER.info("End");
+    }
+    
+    private static void testGetAllPermanentEmployeesHql() {
+        LOGGER.info("Start");
+        List<Employee> employees = employeeService.getAllPermanentEmployeesHql();
+        LOGGER.debug("Permanent Employees HQL={}", employees);
+        LOGGER.info("End");
+    }
+
+    private static void testGetAllPermanentEmployeesHqlFetch() {
+        LOGGER.info("Start");
+        List<Employee> employees = employeeService.getAllPermanentEmployeesHqlFetch();
+        LOGGER.debug("Permanent Employees HQL Fetch={}", employees);
+        employees.forEach(e -> LOGGER.debug("Skills={}", e.getSkillList()));
+        LOGGER.info("End");
+    }
+
+    private static void testGetAverageSalary() {
+        LOGGER.info("Start");
+        double avgSalary = employeeService.getAverageSalary();
+        LOGGER.debug("Average Salary={}", avgSalary);
+        LOGGER.info("End");
+    }
+
+    private static void testGetAverageSalaryByDepartment() {
+        LOGGER.info("Start");
+        double avgSalary = employeeService.getAverageSalaryByDepartment(1);
+        LOGGER.debug("Average Salary Department 1={}", avgSalary);
+        LOGGER.info("End");
+    }
+
+    private static void testGetAllEmployeesNative() {
+        LOGGER.info("Start");
+        List<Employee> employees = employeeService.getAllEmployeesNative();
+        LOGGER.debug("Employees Native Query={}", employees);
         LOGGER.info("End");
     }
 }
