@@ -11,4 +11,8 @@ import com.cognizant.ormlearn.model.Country;
 public interface CountryRepository extends JpaRepository<Country, String> {
 
     List<Country> findByNameContainingOrderByNameAsc(String name);
+    List<Country> findByNameStartingWith(String name);
+    List<Country> findByNameEndingWith(String name);
+    List<Country> findByNameContaining(String name);
+    List<Country> findByCode(String code);
 }

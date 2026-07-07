@@ -56,4 +56,25 @@ public class CountryService {
     public List<Country> searchCountriesByPartialName(String name) {
         return countryRepository.findByNameContainingOrderByNameAsc(name);
     }
+
+    @Transactional
+    public List<Country> getCountriesStartingWith(String name) {
+        return countryRepository.findByNameStartingWith(name);
+    }
+
+    @Transactional
+    public List<Country> getCountriesEndingWith(String name) {
+        return countryRepository.findByNameEndingWith(name);
+    }
+
+    @Transactional
+    public List<Country> getCountriesContaining(String name) {
+        return countryRepository.findByNameContaining(name);
+    }
+
+    @Transactional
+    public List<Country> getCountryByCode(String code) {
+        return countryRepository.findByCode(code);
+    }
+    
 }

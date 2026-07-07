@@ -32,6 +32,12 @@ public class OrmLearnApplication {
         testUpdateCountry();
         testSearchCountryByPartialName();
         testDeleteCountry();
+
+        testCountriesStartingWith();
+        testCountriesEndingWith();
+        testCountriesContaining();
+        testCountryByCodeRepository();
+        
     }
 
     private static void testGetAllCountries() {
@@ -80,4 +86,33 @@ public class OrmLearnApplication {
         LOGGER.debug("Country deleted with code: JP");
         LOGGER.info("End");
     }
+
+    private static void testCountriesStartingWith() {
+        LOGGER.info("Start");
+        List<Country> countries = countryService.getCountriesStartingWith("U");
+        LOGGER.debug("Countries={}", countries);
+        LOGGER.info("End");
+    }
+
+    private static void testCountriesEndingWith() {
+        LOGGER.info("Start");
+        List<Country> countries = countryService.getCountriesEndingWith("a");
+        LOGGER.debug("Countries={}", countries);
+        LOGGER.info("End");
+    }
+
+    private static void testCountriesContaining() {
+        LOGGER.info("Start");
+        List<Country> countries = countryService.getCountriesContaining("Ind");
+        LOGGER.debug("Countries={}", countries);
+        LOGGER.info("End");
+    }
+
+    private static void testCountryByCodeRepository() {
+        LOGGER.info("Start");
+        List<Country> countries = countryService.getCountryByCode("IN");
+        LOGGER.debug("Countries={}", countries);
+        LOGGER.info("End");
+    }
+
 }
