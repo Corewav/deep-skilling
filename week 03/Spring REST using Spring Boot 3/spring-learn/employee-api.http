@@ -1,0 +1,28 @@
+### Get Single Employee
+GET http://localhost:8083/employee
+
+
+### Get All Employees
+GET http://localhost:8083/employees
+
+
+### Add Employee
+POST http://localhost:8083/employee
+Content-Type: application/json
+
+{
+  "id": 104,
+  "name": "Rohit",
+  "salary": 80000
+}
+
+
+### Update Employee
+PUT http://localhost:8083/employee
+Content-Type: application/json
+
+{
+  "id": 101,
+  "name": "Mihir Updated",
+  "salary": 90000
+}
