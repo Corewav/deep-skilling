@@ -26,3 +26,16 @@ Content-Type: application/json
   "name": "Mihir Updated",
   "salary": 90000
 }
+
+### Get All Countries
+GET http://localhost:8083/countries
+
+### Get Country By Code
+GET http://localhost:8083/countries/IN
+
+### Get Country By Code
+GET http://localhost:8083/countries/IN
+
+
+### Invalid Country Code
+GET http://localhost:8083/countries/ABC
