@@ -39,3 +39,20 @@ GET http://localhost:8083/countries/IN
 
 ### Invalid Country Code
 GET http://localhost:8083/countries/ABC
+
+
+### Generate JWT Token
+
+POST http://localhost:8083/authenticate
+Content-Type: application/json
+
+
+{
+  "username":"mihir",
+  "password":"12345"
+}
+
+
+### Get Employees with JWT
+GET http://localhost:8083/employees
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWhpciIsImlhdCI6MTc4Mzc1ODA0NywiZXhwIjoxNzgzNzYxNjQ3fQ.m3GKev0DCb0TX2A-GHlYX2bVOFr8sVmJSGgOBO1EjT0
