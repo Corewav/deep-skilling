@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.blog-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+.blog-container h1 {
+  text-align: center;
+  color: #282c34;
+}
+
+.post-card {
+  background-color: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h2 {
+  color: #007bff;
+}
+
+.post-card p {
+  color: #555;
+  line-height: 1.6;
+}
