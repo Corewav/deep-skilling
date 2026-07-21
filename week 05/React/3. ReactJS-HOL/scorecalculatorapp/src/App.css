@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Main Heading */
+.app-container > h1 {
+  color: #282c34;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Cards Container Layout */
+.score-card {
+  display: inline-block;
+  vertical-align: top;
+
+  background-color: white;
+  width: 400px;
+  margin: 15px;
+  padding: 30px;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+}
+
+/* Student Name */
+.score-card h1 {
+  color: #282c34;
+  margin-bottom: 25px;
+}
+
+/* School Name */
+.score-card h2 {
+  color: #007bff;
+}
+
+/* Score Details */
+.score-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Final Score */
+.score-card h3 {
+  margin-top: 25px;
+  padding: 15px;
+
+  background-color: #282c34;
+  color: white;
+
+  border-radius: 8px;
+}
