@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.app-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.app-container h1 {
+  color: #282c34;
+}
+
+.section {
+  background-color: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+  color: #007bff;
+}
+
+.section h3 {
+  color: #282c34;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.section p {
+  color: #555;
+  font-size: 17px;
+}
