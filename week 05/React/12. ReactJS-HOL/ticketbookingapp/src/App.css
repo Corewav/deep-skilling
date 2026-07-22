@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  color: #282c34;
+  margin-bottom: 30px;
+}
+
+.page-card {
+  background-color: white;
+  width: 450px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-card h2 {
+  color: #007bff;
+}
+
+.page-card h3 {
+  color: #282c34;
+}
+
+.page-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #282c34;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
