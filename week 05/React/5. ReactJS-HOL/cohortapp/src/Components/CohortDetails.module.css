@@ -1,0 +1,35 @@
+.box {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box h1 {
+    color: #282c34;
+    text-align: center;
+}
+
+.box dt {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+.box dd {
+    margin-left: 0;
+    margin-top: 5px;
+    color: #555;
+}
+
+.ongoing {
+    color: green !important;
+    font-weight: bold;
+}
+
+.completed {
+    color: blue !important;
+    font-weight: bold;
+}
